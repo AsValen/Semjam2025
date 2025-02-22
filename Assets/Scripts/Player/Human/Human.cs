@@ -4,21 +4,31 @@ public class Human : MonoBehaviour
 {
     [SerializeField] private float moveSpeed = 15f;
     [SerializeField] private float jumpForce = 10f;
+
     private Rigidbody2D rb;
-    // Need to be change for isGounded if  double jump
     private bool isGrounded;
     private const string GROUND = "Ground";
+
     [SerializeField] private int jumpCharge = 2;
     [SerializeField] private int jumpChargeDefault = 2;
+
+    [SerializeField] private BoxCollider2D bc2d;
+    [SerializeField] private float bigSize = 1.5f;
+    [SerializeField] private float defaultSize = 1.0f;
+    [SerializeField] private float smallSize = 0.5f;
+    [SerializeField] private int stateSize = 1;
 
     private void Start() {
         rb = GetComponent<Rigidbody2D>();
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+
+        bc2d = GetComponent<BoxCollider2D>();
     }
 
     private void Update() {
         HandleMovement();
         HandleJump();
+        HandleSizeChange();
     }
 
     private void HandleMovement() {
@@ -50,10 +60,42 @@ public class Human : MonoBehaviour
         }
     }
 
+    private void HandleSizeChange()
+    {
+        Vector2 newSize = bc2d.size;
+
+        if (Input.GetKeyDown(KeyCode.Q) && stateSize <= 2)
+        {
+            stateSize += 1;
+
+            if (stateSize == 0)
+            {
+                newSize.y = defaultSize;
+            } else
+            {
+                newSize.y = bigSize;
+            }
+           
+        } else if (Input.GetKeyDown(KeyCode.E) && stateSize >= 0)
+        {
+            stateSize -= 1;
+
+            if (stateSize == 2)
+            {
+                newSize.y = defaultSize;
+            }
+            else
+            {
+                newSize.y = smallSize;
+            }
+        }
+
+        bc2d.size = newSize;
+    }
+
     //Ground Check
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("test");
         if (collision.gameObject.CompareTag(GROUND))
         {
             isGrounded = true;
