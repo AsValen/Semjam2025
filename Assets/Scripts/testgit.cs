@@ -13,6 +13,6 @@ public class testgit : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        print "hellow worldo1";
+       
     }
 }
