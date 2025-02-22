@@ -7,11 +7,13 @@ public class CameraManager : MonoBehaviour
     [SerializeField] private Camera camera1;
     [SerializeField] private Camera camera2;
     [SerializeField] private Camera mergedCamera;
+    // 5f means that its 5 unity units
     [SerializeField] private float mergeDistance = 5f; // Distance to merge cameras
     private const string MAIN_CAMERA = "MainCamera";
     private const string UNTAGGED = "Untagged";
 
     private bool isMerged = false;
+
 
     void Start()
     {
