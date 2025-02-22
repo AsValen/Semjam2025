@@ -1,18 +1,52 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Robot : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+    [SerializeField] private float moveSpeed = 15f;
+    [SerializeField] private float jumpForce = 10f;
+    private Rigidbody2D rb;
+    private bool isGrounded;
+    private const string GROUND = "Ground";
+
+    private void Start() {
+        rb = GetComponent<Rigidbody2D>();
+        rb.constraints = RigidbodyConstraints2D.FreezeRotation;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
+    private void Update() {
+        HandleMovement();
+        HandleJump();
+    }
+
+    private void HandleMovement() {
         
+        float moveInput = 0f;
+
+        if (Input.GetKey(KeyCode.LeftArrow)) {
+            moveInput = -1f; // Move left
+        } 
+        else if (Input.GetKey(KeyCode.RightArrow)) {
+            moveInput = 1f; // Move right
+        }
+
+        rb.velocity = new Vector2(moveInput * moveSpeed, rb.velocity.y);
+    }
+
+    private void HandleJump() {
+
+        if (Input.GetKeyDown(KeyCode.UpArrow) && isGrounded)
+        {
+            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+            isGrounded = false; 
+        }
+    }
+
+    //Ground Check
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag(GROUND))
+        {
+            isGrounded = true;
+        }
     }
 }
