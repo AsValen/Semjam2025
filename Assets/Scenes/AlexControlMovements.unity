@@ -237,6 +237,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1687257850041157719, guid: acf8e8a122bbc5845a133fa67fa6d399, type: 3}
   m_PrefabInstance: {fileID: 1687257850887991035}
   m_PrefabAsset: {fileID: 0}
+--- !u!212 &1850382353 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 1687257850872350812, guid: acf8e8a122bbc5845a133fa67fa6d399, type: 3}
+  m_PrefabInstance: {fileID: 1687257850887991035}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1994562735
 GameObject:
   m_ObjectHideFlags: 0
@@ -487,9 +492,25 @@ PrefabInstance:
       value: Human
       objectReference: {fileID: 0}
     - target: {fileID: 1687257850041157716, guid: acf8e8a122bbc5845a133fa67fa6d399, type: 3}
+      propertyPath: sr
+      value: 
+      objectReference: {fileID: 1850382353}
+    - target: {fileID: 1687257850041157716, guid: acf8e8a122bbc5845a133fa67fa6d399, type: 3}
+      propertyPath: bigSprite
+      value: 
+      objectReference: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 1687257850041157716, guid: acf8e8a122bbc5845a133fa67fa6d399, type: 3}
       propertyPath: jumpCharge
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1687257850041157716, guid: acf8e8a122bbc5845a133fa67fa6d399, type: 3}
+      propertyPath: smallSprite
+      value: 
+      objectReference: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 1687257850041157716, guid: acf8e8a122bbc5845a133fa67fa6d399, type: 3}
+      propertyPath: defaultSprite
+      value: 
+      objectReference: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
     - target: {fileID: 1687257850041157719, guid: acf8e8a122bbc5845a133fa67fa6d399, type: 3}
       propertyPath: m_RootOrder
       value: 8

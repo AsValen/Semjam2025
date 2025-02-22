@@ -12,11 +12,16 @@ public class Human : MonoBehaviour
     [SerializeField] private int jumpCharge = 2;
     [SerializeField] private int jumpChargeDefault = 2;
 
-    [SerializeField] private BoxCollider2D bc2d;
+    private BoxCollider2D bc2d;
     [SerializeField] private float bigSize = 1.5f;
     [SerializeField] private float defaultSize = 1.0f;
     [SerializeField] private float smallSize = 0.5f;
-    [SerializeField] private int stateSize = 1;
+    private int stateSize = 1;
+
+    [SerializeField] private Sprite bigSprite;
+    [SerializeField] private Sprite defaultSprite;
+    [SerializeField] private Sprite smallSprite;
+    [SerializeField] private SpriteRenderer sr;
 
     private void Start() {
         rb = GetComponent<Rigidbody2D>();
@@ -64,30 +69,34 @@ public class Human : MonoBehaviour
     {
         Vector2 newSize = bc2d.size;
 
-        if (Input.GetKeyDown(KeyCode.Q) && stateSize <= 2)
+        if (Input.GetKeyDown(KeyCode.Q) && stateSize < 2)
         {
-            stateSize += 1;
-
             if (stateSize == 0)
             {
+                sr.sprite = defaultSprite;
                 newSize.y = defaultSize;
             } else
             {
+                sr.sprite = bigSprite;
                 newSize.y = bigSize;
             }
-           
-        } else if (Input.GetKeyDown(KeyCode.E) && stateSize >= 0)
-        {
-            stateSize -= 1;
 
+            stateSize += 1;
+
+        } else if (Input.GetKeyDown(KeyCode.E) && stateSize > 0)
+        {
             if (stateSize == 2)
             {
+                sr.sprite = defaultSprite;
                 newSize.y = defaultSize;
             }
             else
             {
+                sr.sprite = smallSprite;
                 newSize.y = smallSize;
             }
+
+            stateSize -= 1;
         }
 
         bc2d.size = newSize;
