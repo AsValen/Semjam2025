@@ -486,6 +486,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Human
       objectReference: {fileID: 0}
+    - target: {fileID: 1687257850041157716, guid: acf8e8a122bbc5845a133fa67fa6d399, type: 3}
+      propertyPath: jumpCharge
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1687257850041157719, guid: acf8e8a122bbc5845a133fa67fa6d399, type: 3}
       propertyPath: m_RootOrder
       value: 8

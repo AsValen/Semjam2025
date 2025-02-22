@@ -8,6 +8,8 @@ public class Human : MonoBehaviour
     // Need to be change for isGounded if  double jump
     private bool isGrounded;
     private const string GROUND = "Ground";
+    [SerializeField] private int jumpCharge = 2;
+    [SerializeField] private int jumpChargeDefault = 2;
 
     private void Start() {
         rb = GetComponent<Rigidbody2D>();
@@ -37,17 +39,25 @@ public class Human : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.W) && isGrounded)
         {
-            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
-            isGrounded = false; 
+            if(jumpCharge!=0)
+            {
+                jumpCharge--;
+                rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+            } else
+            {
+                isGrounded = false; 
+            }
         }
     }
 
     //Ground Check
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        Debug.Log("test");
         if (collision.gameObject.CompareTag(GROUND))
         {
             isGrounded = true;
+            jumpCharge = jumpChargeDefault;
         }
     }
 }
