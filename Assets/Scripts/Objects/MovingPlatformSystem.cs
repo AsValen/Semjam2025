@@ -3,14 +3,14 @@ using UnityEngine;
 public class MovingPlatformSystem : MonoBehaviour
 {
     [SerializeField] private float moveSpeed = 2f;
-    [SerializeField] private Transform endPoint;  // The highest point the platform reaches
+    [SerializeField] private Transform endPoint;  
     [SerializeField] private Platform platform;
 
-    private Vector3 startPoint; // Store initial Y position
+    private Vector3 startPoint; // Store initial position
 
     private void Start()
     {
-        startPoint = platform.transform.position; // Set bottomY to platform's starting position
+        startPoint = platform.transform.position; // Set startPoint to platform's starting position
     }
 
     private void Update()
