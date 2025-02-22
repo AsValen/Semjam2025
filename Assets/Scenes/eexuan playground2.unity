@@ -508,6 +508,11 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!212 &517970452 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 311624411228754208, guid: 0563d7508b201994e88fd8b46d4e4f2a, type: 3}
+  m_PrefabInstance: {fileID: 2106150604}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &601442838
 GameObject:
   m_ObjectHideFlags: 0
@@ -3424,6 +3429,14 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 311624412043170088, guid: 0563d7508b201994e88fd8b46d4e4f2a, type: 3}
+      propertyPath: sr
+      value: 
+      objectReference: {fileID: 517970452}
+    - target: {fileID: 311624412043170088, guid: 0563d7508b201994e88fd8b46d4e4f2a, type: 3}
+      propertyPath: bigSprite
+      value: 
+      objectReference: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 311624412043170088, guid: 0563d7508b201994e88fd8b46d4e4f2a, type: 3}
       propertyPath: jumpForce
       value: 17
       objectReference: {fileID: 0}
@@ -3431,6 +3444,14 @@ PrefabInstance:
       propertyPath: moveSpeed
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 311624412043170088, guid: 0563d7508b201994e88fd8b46d4e4f2a, type: 3}
+      propertyPath: smallSprite
+      value: 
+      objectReference: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 311624412043170088, guid: 0563d7508b201994e88fd8b46d4e4f2a, type: 3}
+      propertyPath: defaultSprite
+      value: 
+      objectReference: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
     - target: {fileID: 311624412043170089, guid: 0563d7508b201994e88fd8b46d4e4f2a, type: 3}
       propertyPath: m_GravityScale
       value: 4
