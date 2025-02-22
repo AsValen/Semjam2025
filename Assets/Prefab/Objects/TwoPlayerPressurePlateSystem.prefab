@@ -251,7 +251,7 @@ GameObject:
   - component: {fileID: 1317725750133818048}
   - component: {fileID: 1317725750133818049}
   m_Layer: 0
-  m_Name: PressurePlateSystem
+  m_Name: TwoPlayerPressurePlateSystem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -425,7 +425,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
-  m_Color: {r: 1, g: 0.2971698, b: 0.755272, a: 1}
+  m_Color: {r: 1, g: 0.5390098, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -509,7 +509,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
-  m_Color: {r: 1, g: 0.2971698, b: 0.755272, a: 1}
+  m_Color: {r: 1, g: 0.5433789, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
