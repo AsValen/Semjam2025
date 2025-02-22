@@ -34,10 +34,9 @@ public class Robot : MonoBehaviour
 
     private void HandleJump() {
 
-        if (Input.GetKeyDown(KeyCode.UpArrow) && isGrounded)
+        if (Input.GetKeyDown(KeyCode.UpArrow))
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
-            isGrounded = false; 
         }
     }
 
