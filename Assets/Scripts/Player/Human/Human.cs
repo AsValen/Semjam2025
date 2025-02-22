@@ -7,7 +7,6 @@ public class Human : MonoBehaviour
 
     private Rigidbody2D rb;
     private bool isGrounded;
-    private const string GROUND = "Ground";
 
     [SerializeField] private int jumpCharge = 2;
     [SerializeField] private int jumpChargeDefault = 2;
@@ -37,7 +36,6 @@ public class Human : MonoBehaviour
     }
 
     private void HandleMovement() {
-
         float moveInput = 0f;
 
         if (Input.GetKey(KeyCode.A)) {
@@ -47,51 +45,42 @@ public class Human : MonoBehaviour
             moveInput = 1f; // Move right
         }
 
-        rb.velocity= new Vector2(moveInput * moveSpeed, rb.velocity.y);
+        rb.velocity = new Vector2(moveInput * moveSpeed, rb.velocity.y);
     }
 
     private void HandleJump() {
+        if (Input.GetKeyDown(KeyCode.W)) {
+            if (isGrounded) {
+                jumpCharge = jumpChargeDefault; // Reset jump charge when grounded
+            }
 
-        if (Input.GetKeyDown(KeyCode.W) && isGrounded)
-        {
-            if(jumpCharge!=0)
-            {
+            if (jumpCharge > 0) {
                 jumpCharge--;
                 rb.velocity = new Vector2(rb.velocity.x, jumpForce);
-            } else
-            {
-                isGrounded = false; 
+                isGrounded = false; // Player is no longer grounded after jumping
             }
         }
     }
 
-    private void HandleSizeChange()
-    {
+    private void HandleSizeChange() {
         Vector2 newSize = bc2d.size;
 
-        if (Input.GetKeyDown(KeyCode.Q) && stateSize < 2)
-        {
-            if (stateSize == 0)
-            {
+        if (Input.GetKeyDown(KeyCode.Q) && stateSize < 2) {
+            if (stateSize == 0) {
                 sr.sprite = defaultSprite;
                 newSize.y = defaultSize;
-            } else
-            {
+            } else {
                 sr.sprite = bigSprite;
                 newSize.y = bigSize;
             }
 
             stateSize += 1;
 
-        } else if (Input.GetKeyDown(KeyCode.E) && stateSize > 0)
-        {
-            if (stateSize == 2)
-            {
+        } else if (Input.GetKeyDown(KeyCode.E) && stateSize > 0) {
+            if (stateSize == 2) {
                 sr.sprite = defaultSprite;
                 newSize.y = defaultSize;
-            }
-            else
-            {
+            } else {
                 sr.sprite = smallSprite;
                 newSize.y = smallSize;
             }
@@ -102,13 +91,26 @@ public class Human : MonoBehaviour
         bc2d.size = newSize;
     }
 
-    //Ground Check
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag(GROUND))
-        {
-            isGrounded = true;
-            jumpCharge = jumpChargeDefault;
+    private void OnCollisionEnter2D(Collision2D collision) {
+        CheckGroundCollision(collision);
+    }
+
+    private void OnCollisionStay2D(Collision2D collision) {
+        CheckGroundCollision(collision);
+    }
+
+    private void OnCollisionExit2D(Collision2D collision) {
+        // If the player leaves the object, check if they are still touching anything
+        isGrounded = false;
+    }
+
+    private void CheckGroundCollision(Collision2D collision) {
+        foreach (ContactPoint2D contact in collision.contacts) {
+            if (contact.point.y < transform.position.y - (bc2d.size.y / 2)) { 
+                // Contact point is below the player's center - standing on something
+                isGrounded = true;
+                return; // No need to check further
+            }
         }
     }
 }
