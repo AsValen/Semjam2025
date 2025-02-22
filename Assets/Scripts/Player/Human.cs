@@ -6,6 +6,7 @@ public class Human : MonoBehaviour
     [SerializeField] private float jumpForce = 10f;
     private Rigidbody2D rb;
     // Need to be change for isGounded if  double jump
+    [SerializeField] private Transform groundCheck;
     private bool isGrounded;
     private const string GROUND = "Ground";
 
@@ -34,20 +35,13 @@ public class Human : MonoBehaviour
     }
 
     private void HandleJump() {
+    //Casts a ray downward and checks for collider
+    RaycastHit2D hit = Physics2D.Raycast(groundCheck.position, Vector2.down, 0.1f);
 
-        if (Input.GetKeyDown(KeyCode.W) && isGrounded)
-        {
-            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
-            isGrounded = false; 
-        }
-    }
+    isGrounded = hit.collider != null; //If the ray hits something on ground true
 
-    //Ground Check
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag(GROUND))
-        {
-            isGrounded = true;
+    if (Input.GetKeyDown(KeyCode.W) && isGrounded) {
+        rb.velocity = new Vector2(rb.velocity.x, jumpForce);
         }
     }
 }
