@@ -795,6 +795,10 @@ PrefabInstance:
       propertyPath: mergedCamera
       value: 
       objectReference: {fileID: 2050779520}
+    - target: {fileID: 9020790654362531592, guid: 2798d97671e413845afadf271d6c147f, type: 3}
+      propertyPath: mergeDistance
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 9020790654362531593, guid: 2798d97671e413845afadf271d6c147f, type: 3}
       propertyPath: m_Name
       value: CameraManager

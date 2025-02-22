@@ -5,6 +5,7 @@ public class Human : MonoBehaviour
     [SerializeField] private float moveSpeed = 15f;
     [SerializeField] private float jumpForce = 10f;
     private Rigidbody2D rb;
+    // Need to be change for isGounded if  double jump
     private bool isGrounded;
     private const string GROUND = "Ground";
 
