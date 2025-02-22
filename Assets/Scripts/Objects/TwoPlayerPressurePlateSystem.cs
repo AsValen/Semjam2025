@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PressurePlateSystemOnePlayer : MonoBehaviour
+public class TwoPlayerPressurePlateSystem : MonoBehaviour
 {
     public GameObject door1; // Reference to the first door
     public GameObject door2; // Reference to the second door
@@ -9,36 +9,20 @@ public class PressurePlateSystemOnePlayer : MonoBehaviour
 
     void Update() {
         // Check if both pressure plates are activated
-        if (plate1.IsActivated)
+        if (plate1.IsActivated && plate2.IsActivated)
         {
-            OpenDoors1();
+            OpenDoors();
         } else {
-            CloseDoors1();
-        }
-
-        if (plate2.IsActivated)
-        {
-            OpenDoors2();
-        }
-        else
-        {
-            CloseDoors2();
+            CloseDoors();
         }
     }
 
-    void OpenDoors1() {
+    void OpenDoors() {
         door1.SetActive(false); // Deactivate the first door
-    }
-    void OpenDoors2()
-    {
         door2.SetActive(false); // Deactivate the second door
     }
 
-    void CloseDoors1() {
-        //Close door 
-    }
-    void CloseDoors2()
-    {
+    void CloseDoors() {
         //Close door 
     }
 }
