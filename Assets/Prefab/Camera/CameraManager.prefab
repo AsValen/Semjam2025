@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a1edbaf57b597e4cba930595195a5f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player1: {fileID: 0}
+  player1: {fileID: 9020790654362531595}
   player2: {fileID: 0}
   camera1: {fileID: 0}
   camera2: {fileID: 0}
