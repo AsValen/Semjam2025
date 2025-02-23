@@ -49102,6 +49102,14 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 311624412043170088, guid: 0563d7508b201994e88fd8b46d4e4f2a, type: 3}
+      propertyPath: sr
+      value: 
+      objectReference: {fileID: 973459419}
+    - target: {fileID: 311624412043170088, guid: 0563d7508b201994e88fd8b46d4e4f2a, type: 3}
+      propertyPath: bigSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 4c0116d21d10a1242a08785fa905017c, type: 3}
+    - target: {fileID: 311624412043170088, guid: 0563d7508b201994e88fd8b46d4e4f2a, type: 3}
       propertyPath: jumpForce
       value: 17
       objectReference: {fileID: 0}
@@ -49167,6 +49175,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0563d7508b201994e88fd8b46d4e4f2a, type: 3}
+--- !u!212 &973459419 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 311624411228754208, guid: 0563d7508b201994e88fd8b46d4e4f2a, type: 3}
+  m_PrefabInstance: {fileID: 973459418}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &988732865
 GameObject:
   m_ObjectHideFlags: 0
