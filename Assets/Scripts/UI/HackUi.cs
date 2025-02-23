@@ -100,4 +100,30 @@ public class HackUi : MonoBehaviour
             }
         }
     }
+
+    // Method to reset the HackUI state
+    public void ResetHackUI()
+    {
+        // Reset the current number to 1
+        currentNumber = 1;
+
+        // Reset button colors and texts
+        foreach (Button button in buttons)
+        {
+            button.image.color = Color.white; // Reset button color
+            TMP_Text buttonText = button.GetComponentInChildren<TMP_Text>();
+            if (buttonText != null)
+            {
+                buttonText.text = ""; // Clear button text
+            }
+        }
+
+        // Reset progress text
+        progressText.text = "";
+
+        // Reassign random numbers to the buttons
+        AssignRandomNumbers();
+
+        Debug.Log("Hacking UI reset for next puzzle.");
+    }
 }

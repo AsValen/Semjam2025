@@ -4,12 +4,13 @@ using TMPro;
 public class HackingPanel : MonoBehaviour
 {
     public GameObject hackingUI; // Assign the hacking UI panel in the Inspector
-    public GameObject door; // Assign the door GameObject to open after hacking
+    public GameObject door;
+    public GameObject door2;// Assign the door GameObject to open after hacking
     public TMP_Text promptText; // Assign the TMP_Text UI element in the Inspector
-    public GameObject unlockableObject;  
 
     private bool playerInRange = false;
     private bool isHacking = false;
+    private bool hackingCompleted = false; // Track if the hacking is completed
 
     void Start()
     {
@@ -18,11 +19,13 @@ public class HackingPanel : MonoBehaviour
             promptText.gameObject.SetActive(false); // Hide prompt at start
         }
         hackingUI.SetActive(false); // Make sure UI is hidden at start
+        door.SetActive(false); // Make sure the door is initially hidden
+        door2.SetActive(false); // Make sure the door is initially hidden
     }
 
     void Update()
     {
-        if (playerInRange && !isHacking && Input.GetKeyDown(KeyCode.UpArrow))
+        if (playerInRange && !hackingCompleted && !isHacking && Input.GetKeyDown(KeyCode.UpArrow))
         {
             StartHacking();
         }
@@ -34,34 +37,47 @@ public class HackingPanel : MonoBehaviour
         hackingUI.SetActive(true); // Show hacking UI
         if (promptText != null)
         {
-            promptText.gameObject.SetActive(false); // Hide prompt
+            promptText.gameObject.SetActive(false); // Hide prompt when hacking starts
         }
     }
 
     public void CompleteHacking()
     {
         isHacking = false;
-        hackingUI.SetActive(false);
+        hackingCompleted = true; // Mark hacking as complete
+        hackingUI.SetActive(false); // Hide hacking UI
         door.SetActive(true);
-        unlockableObject.SetActive(true);
+        door2.SetActive(true);// Open the door (or disable the door object to "open" it)
+        Debug.Log("Hacking complete! Door opened.");
+    }
+
+    public void ResetHackingUI() // Reset UI for reuse
+    {
+        // Reset hacking state
+        hackingCompleted = false;
+        isHacking = false;
+
+        // Hide the UI and show prompt again when player is in range
+        hackingUI.SetActive(false); // Hide hacking UI
+        door.SetActive(false); // Hide the door
 
         if (promptText != null)
         {
-            promptText.gameObject.SetActive(false); // ✅ Hide prompt
+            promptText.gameObject.SetActive(true); // Show prompt to interact
         }
 
-        GetComponent<Collider2D>().enabled = false; // ✅ Prevent re-interaction
+        Debug.Log("Hacking UI reset for next puzzle.");
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") && !hackingCompleted)
         {
             playerInRange = true;
             if (promptText != null)
             {
                 promptText.text = "Press ↑ to Hack";
-                promptText.gameObject.SetActive(true); // Show prompt
+                promptText.gameObject.SetActive(true); // Show prompt when player is in range
             }
         }
     }
@@ -73,7 +89,7 @@ public class HackingPanel : MonoBehaviour
             playerInRange = false;
             if (promptText != null)
             {
-                promptText.gameObject.SetActive(false); // Hide prompt
+                promptText.gameObject.SetActive(false); // Hide prompt when player leaves range
             }
         }
     }

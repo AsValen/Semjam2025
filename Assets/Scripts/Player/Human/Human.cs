@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Human : MonoBehaviour
 {
+    [SerializeField] public GameObject canvas;
     [SerializeField] private float moveSpeed = 15f;
     [SerializeField] private float jumpForce = 10f;
 
@@ -22,6 +23,8 @@ public class Human : MonoBehaviour
     [SerializeField] private Sprite defaultSprite;
     [SerializeField] private Sprite smallSprite;
     [SerializeField] private SpriteRenderer sr;
+
+    public bool HUG = false;
 
     private void Start() {
         rb = GetComponent<Rigidbody2D>();
@@ -114,5 +117,15 @@ public class Human : MonoBehaviour
             isGrounded = true;
             jumpCharge = jumpChargeDefault;
         }
+
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            HUG = true;
+            canvas.gameObject.SetActive(true);
+            Debug.Log("HUGGING");
+            
+        }
+
+
     }
 }

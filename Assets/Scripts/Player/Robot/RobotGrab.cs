@@ -57,7 +57,7 @@ public class RobotGrab : MonoBehaviour
             //Debug.Log("Enemy Detected! Attack Mode");
             Debug.DrawRay(rayOrigin, direction * obstacleRayDistance, Color.red);
 
-            if (Input.GetKeyDown(KeyCode.RightControl))
+            if (Input.GetKeyDown(KeyCode.RightShift))
             {
                 var robotScript = GetComponent<Robot>();
                 //var robotCollider = GetComponent<BoxCollider2D>();
