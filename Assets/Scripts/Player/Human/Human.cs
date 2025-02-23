@@ -18,16 +18,22 @@ public class Human : MonoBehaviour
     [SerializeField] private float smallSize = 0.5f;
     private int stateSize = 1;
 
-    [SerializeField] private Sprite bigSprite;
-    [SerializeField] private Sprite defaultSprite;
-    [SerializeField] private Sprite smallSprite;
+    //[SerializeField] private Sprite bigSprite;
+    //[SerializeField] private Sprite defaultSprite;
+    //[SerializeField] private Sprite smallSprite;
     [SerializeField] private SpriteRenderer sr;
+
+    [SerializeField] private Animator animator;
+    [SerializeField] private GameObject human;
+    private float defaultScale = 0.1067015f;
+    private float smallScale = 0.05335075f;
+    private float bigScale = 0.213403f;
 
     private void Start() {
         rb = GetComponent<Rigidbody2D>();
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
 
-        bc2d = GetComponent<BoxCollider2D>();
+        bc2d = GetComponent<BoxCollider2D>(); 
     }
 
     private void Update() {
@@ -42,9 +48,16 @@ public class Human : MonoBehaviour
 
         if (Input.GetKey(KeyCode.A)) {
             moveInput = -1f; // Move left
+            animator.Play("humanWalkLeft");
         } 
         else if (Input.GetKey(KeyCode.D)) {
             moveInput = 1f; // Move right
+            animator.Play("humanWalkRight");
+        }
+        else
+        {
+            moveInput = 0f;
+            animator.Play("humanIdle");
         }
 
         rb.velocity= new Vector2(moveInput * moveSpeed, rb.velocity.y);
@@ -77,12 +90,14 @@ public class Human : MonoBehaviour
         {
             if (stateSize == 0)
             {
-                sr.sprite = defaultSprite;
+                //sr.sprite = defaultSprite;
                 newSize.y = defaultSize;
+                human.transform.localScale = new Vector3(defaultScale, defaultScale, 0);
             } else
             {
-                sr.sprite = bigSprite;
+                //sr.sprite = bigSprite;
                 newSize.y = bigSize;
+                human.transform.localScale = new Vector3(bigScale, bigScale, 0);
             }
 
             stateSize += 1;
@@ -91,13 +106,15 @@ public class Human : MonoBehaviour
         {
             if (stateSize == 2)
             {
-                sr.sprite = defaultSprite;
+                //sr.sprite = defaultSprite;
                 newSize.y = defaultSize;
+                human.transform.localScale = new Vector3(defaultScale, defaultScale, 0);
             }
             else
             {
-                sr.sprite = smallSprite;
+                //sr.sprite = smallSprite;
                 newSize.y = smallSize;
+                human.transform.localScale = new Vector3(smallScale, smallScale, 0);
             }
 
             stateSize -= 1;

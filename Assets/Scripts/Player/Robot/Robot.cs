@@ -31,20 +31,20 @@ public class Robot : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftArrow)) {
             moveInput = -1f; // Move left
             p2SR.sprite = playerLeft; // Move left animation
-            Debug.Log(moveInput);
+
         } 
         else if (Input.GetKey(KeyCode.RightArrow)) {
             moveInput = 1f; // Move right
             p2SR.sprite = playerRight; // Move right animation
-            Debug.Log(moveInput);
+          
         } else
         {
             moveInput = 0f;
             p2SR.sprite = defaultSprite;
-            Debug.Log(moveInput);
+           
         }
 
         rb.velocity = new Vector2(moveInput * moveSpeed, rb.velocity.y);
-        Debug.Log(rb.velocity);
+
     }
 }
