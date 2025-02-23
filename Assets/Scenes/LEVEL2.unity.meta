@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Scenes/LEVEL2.unity.meta
 guid: 6ea6c5b48c215084db97de07b65f78d2
+=======
+guid: 42c5322bfcfdb914a8287302fb067139
+>>>>>>> 02f13219b90d759a7755aca494b65229b91eb412:Assets/Scenes/alexGrab.unity.meta
 guid: c777ac4e1f5e81b46960020a982e9cff
 DefaultImporter:
   externalObjects: {}
