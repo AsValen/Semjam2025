@@ -74,6 +74,7 @@ GameObject:
   - component: {fileID: 7180019387356551742}
   - component: {fileID: 7180019387356551743}
   - component: {fileID: 452440886698360782}
+  - component: {fileID: 7092703621136595539}
   m_Layer: 8
   m_Name: Robot
   m_TagString: Player
@@ -163,9 +164,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 15
   jumpForce: 10
+  moveInput: 0
+--- !u!114 &7092703621136595539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7180019387356551741}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdaf1759b4194d94d8167c13a408d36c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   leftObjectRay: {fileID: 8271261785830464524}
   rightObjectRay: {fileID: 6429686894092224426}
-  obstacleRayDistance: 5
+  obstacleRayDistance: 30
   moveInput: 0
 --- !u!1 &7180019387401421538
 GameObject:
@@ -369,11 +383,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2268620436589890158, guid: 3a8f62c5c5b109e47a9047d67c2269d4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -27.9
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2268620436589890158, guid: 3a8f62c5c5b109e47a9047d67c2269d4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -16.8
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2268620436589890158, guid: 3a8f62c5c5b109e47a9047d67c2269d4, type: 3}
       propertyPath: m_LocalPosition.z
