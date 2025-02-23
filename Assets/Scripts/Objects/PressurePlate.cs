@@ -9,6 +9,7 @@ public class PressurePlate : MonoBehaviour
         if (other.CompareTag(PLAYER)) // Check if the object is a player
         {
             IsActivated = true;
+            transform.localScale = new Vector3(1f, 0.5f, 1f);
             Debug.Log("Activated");
         }
     }
@@ -17,6 +18,7 @@ public class PressurePlate : MonoBehaviour
         if (other.CompareTag(PLAYER)) // Check if the object is a player
         {
             IsActivated = false;
+            transform.localScale = new Vector3(1f, 1f, 1f);
             Debug.Log("Deactive");
         }
     }

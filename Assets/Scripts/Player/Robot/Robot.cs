@@ -6,11 +6,13 @@ public class Robot : MonoBehaviour
     [SerializeField] private float jumpForce = 10f;
     private Rigidbody2D rb;
     private bool isGrounded;
-    private const string GROUND = "Ground";
+    private BoxCollider2D bc2d;
 
     private void Start() {
         rb = GetComponent<Rigidbody2D>();
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+
+        bc2d = GetComponent<BoxCollider2D>();
     }
 
     private void Update() {
@@ -41,12 +43,26 @@ public class Robot : MonoBehaviour
         }
     }
 
-    //Ground Check
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag(GROUND))
-        {
-            isGrounded = true;
+    private void OnCollisionEnter2D(Collision2D collision) {
+        CheckGroundCollision(collision);
+    }
+
+    private void OnCollisionStay2D(Collision2D collision) {
+        CheckGroundCollision(collision);
+    }
+
+    private void OnCollisionExit2D(Collision2D collision) {
+        // If the player leaves the object, check if they are still touching anything
+        isGrounded = false;
+    }
+
+    private void CheckGroundCollision(Collision2D collision) {
+        foreach (ContactPoint2D contact in collision.contacts) {
+            if (contact.point.y < transform.position.y - (bc2d.size.y / 2)) { 
+                // Contact point is below the player's center - standing on something
+                isGrounded = true;
+                return; // No need to check further
+            }
         }
     }
 }
