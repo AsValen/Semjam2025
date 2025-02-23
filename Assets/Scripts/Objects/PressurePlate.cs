@@ -4,6 +4,7 @@ public class PressurePlate : MonoBehaviour
 {
     private const string PLAYER = "Player";
     public bool IsActivated { get; private set; } = false;
+    public AudioSource ButtonPressed;
 
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.CompareTag(PLAYER)) // Check if the object is a player
@@ -11,6 +12,8 @@ public class PressurePlate : MonoBehaviour
             IsActivated = true;
             transform.localScale = new Vector3(1f, 0.5f, 1f);
             Debug.Log("Activated");
+
+            PlayButtonPressed(); //Play sound when pressed
         }
     }
 
@@ -21,5 +24,9 @@ public class PressurePlate : MonoBehaviour
             transform.localScale = new Vector3(1f, 1f, 1f);
             Debug.Log("Deactive");
         }
+    }
+
+    private void PlayButtonPressed(){
+        ButtonPressed.Play();
     }
 }

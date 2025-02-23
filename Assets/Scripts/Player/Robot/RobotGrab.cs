@@ -14,6 +14,7 @@ public class RobotGrab : MonoBehaviour
     private float characterDirection = 0f;
     private Vector2 rayOrigin = Vector2.zero;
     private int layerMask;
+    public AudioSource Grab;
 
     // Start is called before the first frame update
     void Start()
@@ -57,11 +58,12 @@ public class RobotGrab : MonoBehaviour
             //Debug.Log("Enemy Detected! Attack Mode");
             Debug.DrawRay(rayOrigin, direction * obstacleRayDistance, Color.red);
 
-            if (Input.GetKeyDown(KeyCode.RightControl))
+            if (Input.GetKeyDown(KeyCode.RightShift))
             {
                 var robotScript = GetComponent<Robot>();
                 //var robotCollider = GetComponent<BoxCollider2D>();
                 var boxScript = hitObstacle.collider.GetComponent<boxMovement>();
+                PlayGrab(); //Play sound when grab
 
                 if (magnetGrabState)
                 {
@@ -84,5 +86,9 @@ public class RobotGrab : MonoBehaviour
             //Debug.Log("No Enemy");
             Debug.DrawRay(rayOrigin, direction * obstacleRayDistance, Color.green);
         }
+    }
+    private void PlayGrab()
+    {
+        Grab.Play();
     }
 }
