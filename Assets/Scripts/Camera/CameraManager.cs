@@ -51,12 +51,11 @@ public class CameraManager : MonoBehaviour
         camera1.tag = UNTAGGED;
         camera2.tag = UNTAGGED;
 
-        // Center merged camera between players (fix Y to 5)
         mergedCamera.transform.position = new Vector3(
-            (player1.position.x + player2.position.x) / 2, // Center X
-            5, // Keep Y at 5
-            -10f // Keep Z at -10
-        );
+    (player1.position.x + player2.position.x) / 2, // Center X
+    mergedCamera.transform.position.y, // Keep current Y position
+    -10f // Keep Z at -10
+);
     }
 
     private void SplitCameras()

@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class NextSceneDoorSystem : MonoBehaviour
 {
-    [SerializeField] private string scene;
+    [SerializeField] private int scene;
     public NextSceneDoor door1; // Reference to the first door
     public NextSceneDoor door2; // Reference to the second door
     

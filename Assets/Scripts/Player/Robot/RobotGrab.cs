@@ -5,7 +5,7 @@ using UnityEngine;
 public class RobotGrab : MonoBehaviour
 {
 
-    private bool magnetGrabState = false;
+    public bool magnetGrabState = false;
     [SerializeField] private GameObject leftObjectRay;
     [SerializeField] private GameObject rightObjectRay;
     [SerializeField] private float obstacleRayDistance;

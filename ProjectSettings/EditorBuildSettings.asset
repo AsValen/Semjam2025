@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/euniceicopy.unity
+    guid: 6ea6c5b48c215084db97de07b65f78d2
+  - enabled: 1
+    path: Assets/Scenes/eexuan copy.unity
+    guid: d35fef7b178decc4d9d8996b14b6f707
   m_configObjects: {}
