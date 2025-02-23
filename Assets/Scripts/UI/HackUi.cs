@@ -7,6 +7,8 @@ public class HackUi : MonoBehaviour
 {
     public TMP_Text progressText, introText;
     public List<Button> buttons; // Assign all 10 buttons in Inspector
+    public HackingPanel hackingPanel; // 🔹 Reference to the HackingPanel script
+
     private List<int> numbers = new List<int>();
     private int currentNumber = 1; // Track the next correct number
 
@@ -39,12 +41,6 @@ public class HackUi : MonoBehaviour
 
         for (int i = 0; i < buttons.Count; i++)
         {
-            if (availableNumbers.Count == 0)
-            {
-                Debug.LogWarning("No more numbers left to assign!");
-                return;
-            }
-
             int randomIndex = Random.Range(0, availableNumbers.Count);
             int chosenNumber = availableNumbers[randomIndex];
             availableNumbers.RemoveAt(randomIndex);
@@ -69,8 +65,6 @@ public class HackUi : MonoBehaviour
         Debug.Log("Numbers assigned successfully.");
     }
 
-
-
     void CheckNumber(int number, Button clickedButton)
     {
         Debug.Log($"Button clicked: {number}, Expected: {currentNumber}");
@@ -81,16 +75,24 @@ public class HackUi : MonoBehaviour
             currentNumber++;
             progressText.text = "";
 
-
             if (currentNumber > 10) // 🎉 All numbers clicked correctly
             {
                 progressText.text = "Task Complete";
                 Debug.Log("Task Complete!");
+
+                // ✅ Call CompleteHacking when finished
+                if (hackingPanel != null)
+                {
+                    hackingPanel.CompleteHacking();
+                }
+                else
+                {
+                    Debug.LogError("HackingPanel reference is missing in HackUi!");
+                }
             }
         }
         else // ❌ Wrong number clicked
         {
-            // Don't change color if the button is already green (correct)
             if (clickedButton.image.color != Color.green)
             {
                 progressText.text = "Wrong button";
@@ -98,5 +100,4 @@ public class HackUi : MonoBehaviour
             }
         }
     }
-
 }
