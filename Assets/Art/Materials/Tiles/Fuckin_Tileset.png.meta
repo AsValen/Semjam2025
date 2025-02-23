@@ -1,0 +1,925 @@
+fileFormatVersion: 2
+guid: 7bebf4d202d69f34cba45caa9513a462
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 89
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Fuckin_Tileset_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 630
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b5edc5056ffa0543b5940042f77d159
+      internalID: 2043865506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuckin_Tileset_1
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 630
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c90bc5b8c7fa7e4eb65470dae6bc8c5
+      internalID: -536405863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuckin_Tileset_2
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 630
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 310ec1502e5490d4b82ce8e2368f3ae2
+      internalID: -1962262607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuckin_Tileset_3
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 630
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 796aec8b46c636d4caeae355f7e1f497
+      internalID: 361244316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuckin_Tileset_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 540
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72464b2ab679f16488039c19deb08d99
+      internalID: -1130584939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuckin_Tileset_5
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 540
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ba9de01c4917714fae181b50802f8fe
+      internalID: -577378832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuckin_Tileset_6
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 540
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82b203ca7d61ecd46a27441a18fa35f0
+      internalID: 1750743280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuckin_Tileset_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 450
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4b4f3c3951d9c142b88f8d70d225f6f
+      internalID: 1187645389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuckin_Tileset_8
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 450
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38e1285b9633a9d49b8fc880ff18349b
+      internalID: -1702953604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuckin_Tileset_9
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 450
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59def3c85869feb4dbe3ff57d5e27f49
+      internalID: 1908772664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuckin_Tileset_10
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 450
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85711ed87ac26394c9fe88af4d4dab0e
+      internalID: -651856553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuckin_Tileset_11
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 450
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6bb4e6d53a927043a9f0ca4b9e83303
+      internalID: 597234181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuckin_Tileset_12
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 450
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eab0fbb7c067de649a6974656c57e56b
+      internalID: -1899385287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuckin_Tileset_13
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 360
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6feffa610eb662e4f9d3d9370449bafd
+      internalID: 2041993477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuckin_Tileset_14
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 360
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a8813117a4aba7408bdda2faeb3a7a6
+      internalID: 1001309788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuckin_Tileset_15
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 360
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fafc9772348fb4643ab2bc98b9741a73
+      internalID: 435395388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuckin_Tileset_16
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 360
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c380b5524b672584c8dff29062abf89f
+      internalID: -713439262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuckin_Tileset_17
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 360
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f42709c380949f74698c9fd5268579e1
+      internalID: -739436889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuckin_Tileset_18
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 360
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec6a2ad479e6a2548b0293f56236e6a1
+      internalID: -1154815497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuckin_Tileset_19
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 270
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c77a58f23aa660042834b664fdf047aa
+      internalID: 752124146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuckin_Tileset_20
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 270
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97349cf3f82186846935339acf7a9076
+      internalID: -1340098856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuckin_Tileset_21
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 270
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbb1f532a7350f041a5768b979a39904
+      internalID: -1067628988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuckin_Tileset_22
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 270
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e72fa1e5aae0f234daed723aac25eaca
+      internalID: 558062711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuckin_Tileset_23
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 270
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a56145f74d0742469b1acdedc93d588
+      internalID: -1385747391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuckin_Tileset_24
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 270
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e6611344dd70874c811d7bfe117e6e0
+      internalID: 815678027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuckin_Tileset_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 180
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc6423c8d54417043b9d06bccf0ea7b7
+      internalID: 1808373466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuckin_Tileset_26
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 180
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 584271e6daa4b864a875fb2ba72ff052
+      internalID: 876692100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuckin_Tileset_27
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 180
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 198fa73155f0c4f44af2d88f9cdaa9fc
+      internalID: 1204064789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuckin_Tileset_28
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 180
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00320191a3fb5df438202b1befe9d7dc
+      internalID: 1078401219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuckin_Tileset_29
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 180
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd7ed97e2e9594f448a2aff8f021dfa8
+      internalID: -270946491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuckin_Tileset_30
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 180
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cd5113af5aef974597b3902e837c257
+      internalID: -2065322560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuckin_Tileset_31
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 90
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22676727eeb3a6d4fbf0a8f7e230cdff
+      internalID: 393649681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuckin_Tileset_32
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 90
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1f1aff2b22ba54469b5a5c7e9e4ce81
+      internalID: 876740429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuckin_Tileset_33
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 90
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7c215831b0531f4794aa4984fb57637
+      internalID: -201671651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuckin_Tileset_34
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 90
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cd60a9311b0921428605ea1450809ef
+      internalID: 53950857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuckin_Tileset_35
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 90
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3acfcdd9bb2e29428f4827006adbe5d
+      internalID: -968195488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuckin_Tileset_36
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 90
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2664855b6b38c5d4f913bd51039f8ab5
+      internalID: 645392599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Fuckin_Tileset_0: 2043865506
+      Fuckin_Tileset_1: -536405863
+      Fuckin_Tileset_10: -651856553
+      Fuckin_Tileset_11: 597234181
+      Fuckin_Tileset_12: -1899385287
+      Fuckin_Tileset_13: 2041993477
+      Fuckin_Tileset_14: 1001309788
+      Fuckin_Tileset_15: 435395388
+      Fuckin_Tileset_16: -713439262
+      Fuckin_Tileset_17: -739436889
+      Fuckin_Tileset_18: -1154815497
+      Fuckin_Tileset_19: 752124146
+      Fuckin_Tileset_2: -1962262607
+      Fuckin_Tileset_20: -1340098856
+      Fuckin_Tileset_21: -1067628988
+      Fuckin_Tileset_22: 558062711
+      Fuckin_Tileset_23: -1385747391
+      Fuckin_Tileset_24: 815678027
+      Fuckin_Tileset_25: 1808373466
+      Fuckin_Tileset_26: 876692100
+      Fuckin_Tileset_27: 1204064789
+      Fuckin_Tileset_28: 1078401219
+      Fuckin_Tileset_29: -270946491
+      Fuckin_Tileset_3: 361244316
+      Fuckin_Tileset_30: -2065322560
+      Fuckin_Tileset_31: 393649681
+      Fuckin_Tileset_32: 876740429
+      Fuckin_Tileset_33: -201671651
+      Fuckin_Tileset_34: 53950857
+      Fuckin_Tileset_35: -968195488
+      Fuckin_Tileset_36: 645392599
+      Fuckin_Tileset_4: -1130584939
+      Fuckin_Tileset_5: -577378832
+      Fuckin_Tileset_6: 1750743280
+      Fuckin_Tileset_7: 1187645389
+      Fuckin_Tileset_8: -1702953604
+      Fuckin_Tileset_9: 1908772664
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

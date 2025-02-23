@@ -56,8 +56,12 @@ public class Human : MonoBehaviour
         {
             if(jumpCharge!=0)
             {
+                if (stateSize == 2) jumpCharge = 1;
+
                 jumpCharge--;
                 rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+
+
             } else
             {
                 isGrounded = false; 
