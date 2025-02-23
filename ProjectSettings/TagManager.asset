@@ -5,18 +5,19 @@ TagManager:
   serializedVersion: 2
   tags:
   - Ground
+  - moveableObject
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - boxGrabObjects
   - Water
   - UI
   - HumanCam
   - RobotCam
   - Player
   - Objects
-  - 
+  - Ground
   - 
   - 
   - 
@@ -41,4 +42,16 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 3734960753
+    locked: 0
+  - name: Objects
+    uniqueID: 3747631945
+    locked: 0
+  - name: Ground
+    uniqueID: 53953643
+    locked: 0
+  - name: Player
+    uniqueID: 2839392183
     locked: 0
