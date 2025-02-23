@@ -6,6 +6,7 @@ public class HackingPanel : MonoBehaviour
     public GameObject hackingUI; // Assign the hacking UI panel in the Inspector
     public GameObject door; // Assign the door GameObject to open after hacking
     public TMP_Text promptText; // Assign the TMP_Text UI element in the Inspector
+    public GameObject unlockableObject;  
 
     private bool playerInRange = false;
     private bool isHacking = false;
@@ -42,6 +43,7 @@ public class HackingPanel : MonoBehaviour
         isHacking = false;
         hackingUI.SetActive(false);
         door.SetActive(true);
+        unlockableObject.SetActive(true);
 
         if (promptText != null)
         {
