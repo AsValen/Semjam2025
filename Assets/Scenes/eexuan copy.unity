@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!20 &79415397 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 888185762048031592, guid: 083fbf1202af0af4c95f265850311844, type: 3}
+  m_PrefabInstance: {fileID: 1411765266}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &211986807 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1865803698824099976, guid: 7a1bca79e90623d479c592537a781536, type: 3}
@@ -29094,6 +29099,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!4 &1212701564 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7180019387356551740, guid: c82b1aab7aceb994885b3b84fa43d194, type: 3}
+  m_PrefabInstance: {fileID: 866266148}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1214827460
 GameObject:
   m_ObjectHideFlags: 0
@@ -29278,8 +29288,43 @@ PrefabInstance:
       propertyPath: m_Name
       value: Camera
       objectReference: {fileID: 0}
+    - target: {fileID: 7426496267859988305, guid: 083fbf1202af0af4c95f265850311844, type: 3}
+      propertyPath: camera1
+      value: 
+      objectReference: {fileID: 1898784232}
+    - target: {fileID: 7426496267859988305, guid: 083fbf1202af0af4c95f265850311844, type: 3}
+      propertyPath: camera2
+      value: 
+      objectReference: {fileID: 1775749871}
+    - target: {fileID: 7426496267859988305, guid: 083fbf1202af0af4c95f265850311844, type: 3}
+      propertyPath: player1
+      value: 
+      objectReference: {fileID: 1655546109}
+    - target: {fileID: 7426496267859988305, guid: 083fbf1202af0af4c95f265850311844, type: 3}
+      propertyPath: player2
+      value: 
+      objectReference: {fileID: 1212701564}
+    - target: {fileID: 7426496267859988305, guid: 083fbf1202af0af4c95f265850311844, type: 3}
+      propertyPath: mergedCamera
+      value: 
+      objectReference: {fileID: 79415397}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 083fbf1202af0af4c95f265850311844, type: 3}
+--- !u!4 &1655546109 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 311624412043170091, guid: 0563d7508b201994e88fd8b46d4e4f2a, type: 3}
+  m_PrefabInstance: {fileID: 2106150604}
+  m_PrefabAsset: {fileID: 0}
+--- !u!20 &1775749871 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 7180019385882822981, guid: c82b1aab7aceb994885b3b84fa43d194, type: 3}
+  m_PrefabInstance: {fileID: 866266148}
+  m_PrefabAsset: {fileID: 0}
+--- !u!20 &1898784232 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 311624412261213516, guid: 0563d7508b201994e88fd8b46d4e4f2a, type: 3}
+  m_PrefabInstance: {fileID: 2106150604}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1963595687 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4002931449986289219, guid: 6f36738ce12e4c54ba92f86598cc649e, type: 3}
