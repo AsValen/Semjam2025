@@ -164,10 +164,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 15
   moveInput: 0
-  p2SR: {fileID: 0}
-  playerLeft: {fileID: 0}
-  playerRight: {fileID: 0}
-  defaultSprite: {fileID: 0}
+  p2SR: {fileID: 7180019387401421540}
+  playerLeft: {fileID: 21300000, guid: 19918d916c118d54fb884853d904d840, type: 3}
+  playerRight: {fileID: 21300000, guid: e3f4f5751aa95204aa9e8ac5785aa7cd, type: 3}
+  defaultSprite: {fileID: 21300000, guid: 9983ec39e60a5474e82ac4e3731a6920, type: 3}
 --- !u!114 &7092703621136595539
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -180,6 +180,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdaf1759b4194d94d8167c13a408d36c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  magnetGrabState: 0
   leftObjectRay: {fileID: 8271261785830464524}
   rightObjectRay: {fileID: 6429686894092224426}
   obstacleRayDistance: 30
@@ -210,7 +211,7 @@ Transform:
   m_GameObject: {fileID: 7180019387401421538}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.7, y: 0.7, z: 1}
+  m_LocalScale: {x: 0.1067015, y: 0.1067015, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7180019387356551740}
@@ -386,11 +387,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2268620436589890158, guid: 3a8f62c5c5b109e47a9047d67c2269d4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -36.45
       objectReference: {fileID: 0}
     - target: {fileID: 2268620436589890158, guid: 3a8f62c5c5b109e47a9047d67c2269d4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5
+      value: -47.5
       objectReference: {fileID: 0}
     - target: {fileID: 2268620436589890158, guid: 3a8f62c5c5b109e47a9047d67c2269d4, type: 3}
       propertyPath: m_LocalPosition.z

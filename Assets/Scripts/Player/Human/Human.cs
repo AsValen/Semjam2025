@@ -19,45 +19,64 @@ public class Human : MonoBehaviour
     [SerializeField] private float smallSize = 0.5f;
     private int stateSize = 1;
 
-    [SerializeField] private Sprite bigSprite;
-    [SerializeField] private Sprite defaultSprite;
-    [SerializeField] private Sprite smallSprite;
+    //[SerializeField] private Sprite bigSprite;
+    //[SerializeField] private Sprite defaultSprite;
+    //[SerializeField] private Sprite smallSprite;
     [SerializeField] private SpriteRenderer sr;
+
+    [SerializeField] private Animator animator;
+    [SerializeField] private GameObject human;
+    private float defaultScale = 0.1067015f;
+    private float smallScale = 0.05335075f;
+    private float bigScale = 0.213403f;
 
     public bool HUG = false;
 
-    private void Start() {
+    private void Start()
+    {
         rb = GetComponent<Rigidbody2D>();
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
 
         bc2d = GetComponent<BoxCollider2D>();
     }
 
-    private void Update() {
+    private void Update()
+    {
         HandleMovement();
         HandleJump();
         HandleSizeChange();
     }
 
-    private void HandleMovement() {
+    private void HandleMovement()
+    {
 
         float moveInput = 0f;
 
-        if (Input.GetKey(KeyCode.A)) {
+        if (Input.GetKey(KeyCode.A))
+        {
             moveInput = -1f; // Move left
-        } 
-        else if (Input.GetKey(KeyCode.D)) {
+            animator.Play("humanWalkLeft");
+        }
+        else if (Input.GetKey(KeyCode.D))
+        {
             moveInput = 1f; // Move right
+            animator.Play("humanWalkRight");
+        }
+        else
+        {
+            moveInput = 0f;
+            animator.Play("humanIdle");
         }
 
-        rb.velocity= new Vector2(moveInput * moveSpeed, rb.velocity.y);
+        rb.velocity = new Vector2(moveInput * moveSpeed, rb.velocity.y);
     }
 
-    private void HandleJump() {
+    private void HandleJump()
+    {
 
         if (Input.GetKeyDown(KeyCode.W) && isGrounded)
         {
-            if(jumpCharge!=0)
+            if (jumpCharge != 0)
             {
                 if (stateSize == 2) jumpCharge = 1;
 
@@ -65,9 +84,10 @@ public class Human : MonoBehaviour
                 rb.velocity = new Vector2(rb.velocity.x, jumpForce);
 
 
-            } else
+            }
+            else
             {
-                isGrounded = false; 
+                isGrounded = false;
             }
         }
     }
@@ -80,27 +100,33 @@ public class Human : MonoBehaviour
         {
             if (stateSize == 0)
             {
-                sr.sprite = defaultSprite;
+                //sr.sprite = defaultSprite;
                 newSize.y = defaultSize;
-            } else
+                human.transform.localScale = new Vector3(defaultScale, defaultScale, 0);
+            }
+            else
             {
-                sr.sprite = bigSprite;
+                //sr.sprite = bigSprite;
                 newSize.y = bigSize;
+                human.transform.localScale = new Vector3(bigScale, bigScale, 0);
             }
 
             stateSize += 1;
 
-        } else if (Input.GetKeyDown(KeyCode.E) && stateSize > 0)
+        }
+        else if (Input.GetKeyDown(KeyCode.E) && stateSize > 0)
         {
             if (stateSize == 2)
             {
-                sr.sprite = defaultSprite;
+                //sr.sprite = defaultSprite;
                 newSize.y = defaultSize;
+                human.transform.localScale = new Vector3(defaultScale, defaultScale, 0);
             }
             else
             {
-                sr.sprite = smallSprite;
+                //sr.sprite = smallSprite;
                 newSize.y = smallSize;
+                human.transform.localScale = new Vector3(smallScale, smallScale, 0);
             }
 
             stateSize -= 1;
@@ -123,9 +149,7 @@ public class Human : MonoBehaviour
             HUG = true;
             canvas.gameObject.SetActive(true);
             Debug.Log("HUGGING");
-            
+
         }
-
-
     }
 }
