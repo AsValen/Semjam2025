@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!212 &184714020 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 311624411228754208, guid: 0563d7508b201994e88fd8b46d4e4f2a, type: 3}
+  m_PrefabInstance: {fileID: 837131975}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &325330021
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -302,6 +307,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 908898514}
     m_Modifications:
+    - target: {fileID: 311624412043170088, guid: 0563d7508b201994e88fd8b46d4e4f2a, type: 3}
+      propertyPath: sr
+      value: 
+      objectReference: {fileID: 184714020}
     - target: {fileID: 311624412043170091, guid: 0563d7508b201994e88fd8b46d4e4f2a, type: 3}
       propertyPath: m_RootOrder
       value: 0
