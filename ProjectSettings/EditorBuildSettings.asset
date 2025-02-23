@@ -6,9 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/euniceicopy.unity
+    path: Assets/Scenes/LEVEL1.unity
+    guid: d35fef7b178decc4d9d8996b14b6f707
+  - enabled: 1
+    path: Assets/Scenes/LEVEL2.unity
     guid: 6ea6c5b48c215084db97de07b65f78d2
   - enabled: 1
-    path: Assets/Scenes/eexuan copy.unity
-    guid: d35fef7b178decc4d9d8996b14b6f707
+    path: Assets/Scenes/LEVEL3.unity
+    guid: 1af5db0c198643a429d0585c24fc37ad
   m_configObjects: {}
